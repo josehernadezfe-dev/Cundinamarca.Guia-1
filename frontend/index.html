@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCundinamarca - Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 text-white">
+
+    <!-- Barra superior -->
+    <header class="bg-slate-800/80 backdrop-blur-md border-b border-slate-700 p-4 flex flex-wrap justify-between items-center gap-3 z-10">
+        <h1 class="text-xl font-bold text-emerald-400">
+            BioCundinamarca GIS
+        </h1>
+
+        <span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30">
+            Estado: Activo
+        </span>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="flex-1 flex flex-col md:flex-row">
+
+        <!-- Panel lateral -->
+        <aside class="w-full md:w-80 bg-slate-800/50 backdrop-blur-lg border-r border-slate-700/50 p-6 space-y-4">
+
+            <h2 class="text-lg font-semibold text-sky-400">
+                Filtros de Biodiversidad
+            </h2>
+
+            <p class="text-sm text-slate-300">
+                Explora las provincias de Cundinamarca.
+            </p>
+
+            <div>
+                <label for="select-provincia" class="block text-xs font-medium text-slate-400 mb-1">
+                    Provincia de Cundinamarca
+                </label>
+
+                <select id="select-provincia"
+                    class="w-full bg-slate-900/80 border border-slate-700 rounded-lg p-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-emerald-500">
+
+                    <option value="todas">Todas las provincias</option>
+                    <option value="Tequendama">Tequendama</option>
+                    <option value="Sabana Centro">Sabana Centro</option>
+                    <option value="Almeidas">Almeidas</option>
+                </select>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                <h3 class="font-semibold text-emerald-300">
+                    Biodiversidad
+                </h3>
+                <p class="text-sm text-slate-300 mt-2">
+                    Consulta y explora la riqueza natural del territorio.
+                </p>
+            </div>
+
+        </aside>
+
+        <!-- Área principal -->
+        <main class="flex-1 p-6 md:p-8">
+
+            <section class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6 shadow-xl">
+                <h2 class="text-2xl font-bold text-emerald-400">
+                    Panel territorial
+                </h2>
+
+                <p class="text-slate-300 mt-2">
+                    Bienvenido al sistema de información geográfica
+                    de la biodiversidad de Cundinamarca.
+                </p>
+
+                <div id="map"
+                    class="mt-6 min-h-[300px] md:min-h-[450px] rounded-xl border border-slate-700 bg-slate-950/70 flex items-center justify-center">
+
+                    <p class="text-slate-400 text-center p-4">
+                        Aquí se integrará el mapa de biodiversidad.
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="border-t border-slate-700 p-4 text-center text-xs text-slate-400">
+        SENA ADSO | Cundinamarca - Desarrollo de Software Territorial
+    </footer>
+
+</body>
+</html>
